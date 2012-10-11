@@ -4,7 +4,7 @@ Gem::Specification.new do |s|
   s.date        = "2011-11-24"
   s.summary     = "Image compression for Paperclip"
   s.description = "JPEG and PNG compression for Paperclip gem"
-  s.author      = "İ. Emre Kutlu"
+  s.author      = "I. Emre Kutlu"
   s.email       = "emrekutlu@gmail.com"
   s.files       = ["lib/paperclip-compression.rb"]
   s.homepage    = "http://github.com/dakick/paperclip-compression"
