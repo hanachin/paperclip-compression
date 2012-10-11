@@ -23,7 +23,6 @@ module Paperclip
 
       begin
         if @attachment.content_type.eql?("image/jpeg")
-	  puts "Computing JPEG from #{src_path} to #{dst_path}"
           Paperclip.run("jpegtran", "-copy none -optimize -perfect #{src_path} > #{dst_path}")
         elsif @attachment.content_type.eql?("image/png")
           Paperclip.run("optipng", "-o 5 #{src_path}")
