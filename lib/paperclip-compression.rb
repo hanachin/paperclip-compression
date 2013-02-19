@@ -25,7 +25,8 @@ module Paperclip
         if @attachment.content_type.eql?("image/jpeg")
           Paperclip.run("jpegtran", "-copy none -optimize -perfect #{src_path} > #{dst_path}")
         elsif @attachment.content_type.eql?("image/png")
-          Paperclip.run("optipng", "-force -o 5 #{src_path} -out #{dst_path}")
+          Paperclip.run("optipng", "-backup -o 5 #{src_path}")
+          return src
         else
           return src
         end
